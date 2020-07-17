@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
+    <title>Adhiwastra Surakarta - Admin</title>
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,7 +82,7 @@ session_start();
                     <li><a data-toggle="tab" href="#user"><i class="menu-icon ti-user"></i>User </a></li>
 					<li><a data-toggle="tab" href="#barang"><i class="menu-icon ti-pulse"></i>Barang </a></li>
 					<li><a data-toggle="tab" href="#transaksi"><i class="menu-icon ti-money"></i>Transaksi </a></li>
-					<li><a data-toggle="tab" href="#komentar"><i class="menu-icon ti-comment"></i>Komentar </a></li>
+<!--					<li><a data-toggle="tab" href="#komentar"><i class="menu-icon ti-comment"></i>Komentar </a></li> -->
 					<li><a data-toggle="tab" href="#admin"><i class="menu-icon ti-desktop"></i>Admin </a></li>
 					
                     
@@ -98,8 +98,8 @@ session_start();
         <header id="header" class="header">
             <div class="top-left">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                    <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+                    <a class="navbar-brand" href="./"><img src="../images/logo_web3.png" style="height:40px;" alt="Logo"></a>
+                    <a class="navbar-brand hidden" href="./"><img src="../images/logo_web3.png" alt="Logo"></a>
                     <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                 </div>
             </div>
@@ -679,7 +679,7 @@ session_start();
 			<!-- Data transaksi End 3-->	            
 			<!-- Data komentar -->	
 			<div id="komentar" class="tab-pane">
-                <div class="clearfix"></div><!-- Orders -->                
+                <div class="clearfix"></div>
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card">
@@ -700,9 +700,7 @@ session_start();
                                                     <th class="avatar">Nama</th>
                                                     <th>Email</th>
                                                     <th>Pesan</th>
-                                                    <th></th>
-                                               <!-- <th>Quantity</th>
-                                                    <th>Status</th> -->
+                                                    <th></th>                                        
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -737,11 +735,11 @@ session_start();
                       }?>   
                                             </tbody>
                                         </table>
-                                    </div> <!-- /.table-stats -->
+                                    </div> 
                                 </div>
-                            </div> <!-- /.card -->
-                        </div>  <!-- /.col-lg-8 -->
-                    </div><!-- /.col-md-4 -->
+                            </div> 
+                        </div>  
+                    </div>
             
 			<!-- Data komentar End 4-->	            
 			<!-- Data admin -->	

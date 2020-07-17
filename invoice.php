@@ -1,4 +1,78 @@
+<?php 
+  require('config/db.php');
+  session_start();
+ ?>
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Toko Batik Surakarta</title>
+		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Fontello CSS -->
+		<link href="fonts/fontello/css/fontello.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="css/animations.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+		<link href="plugins/hover/hover-min.css" rel="stylesheet">		
+
+		<!-- the project core CSS file -->
+		<link href="css/style.css" rel="stylesheet" media="screen">
+
+		<!-- Print Invoice CSS -->
+		<link href="css/print-invoice.css" rel="stylesheet" media="print">
+
+		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+		<link href="css/skins/light_blue.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
+
+	<!-- body classes:  -->
+	<!-- "boxed": boxed layout mode e.g. <body class="boxed"> -->
+	<!-- "pattern-1 ... pattern-9": background patterns for boxed layout mode e.g. <body class="boxed pattern-1"> -->
+	<!-- "transparent-header": makes the header transparent and pulls the banner to top -->
+	<!-- "page-loader-1 ... page-loader-6": add a page loader to the page (more info @components-page-loaders.html) -->
+	<body class="no-trans   ">
+
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+		
+		<!-- page wrapper start -->
+		<!-- ================ -->
+		<div class="page-wrapper">
+		
 			<!-- header-container start -->
+						<!-- header-container start -->
 			<div class="header-container">
 				
 				<!-- header-top start -->
@@ -267,3 +341,167 @@
 				<!-- header end -->
 			</div>
 			<!-- header-container end -->
+			<!-- header-container end -->
+		
+			<!-- breadcrumb start -->
+			<!-- ================ -->
+			<!-- breadcrumb end -->
+
+			<!-- main-container start -->
+			<!-- ================ -->
+			<section class="main-container">
+
+				<div class="container">
+					<div class="row">
+
+						<!-- main start -->
+						<!-- ================ -->
+						<div class="main col-md-12">
+
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h1 class="page-title">Invoice Pembayaran</h1>
+							<div class="separator-2"></div>
+							<!-- page-title end -->
+
+							<div id="invoice-container" class="invoice-container">
+								<div class="row">
+									<div class="col-sm-6">
+										<img src="images/logo_web3.png" alt="logo">
+										<p class="invoice-slogan"></p>
+										<address class="small">
+											<strong>Adhiwastra Group.</strong><br>
+											Wisma Gading Marina Suite 308, <br>
+											Kelapa Gading, RT.15/RW.3<br>
+											<abbr title="Phone">P:</abbr> (085) 6515 1123<br>
+											E-mail: adhiwastrajakarta@gmail.com
+										</address>
+									</div>
+									<div class="col-sm-offset-3 col-sm-3">
+										<p class="text-right small"><strong>Invoice #001</strong> <br><?php echo date('l, d M Y'); ?></p>
+										<h5 class="text-right">Pelanggan</h5>
+										<p class="text-right small">
+										<?php             									
+										$sql_alamat	= "SELECT * FROM tabel_alamat WHERE idUser='$_SESSION[idUser]'";
+										$querypelanggan = mysqli_query($conn, $sql_alamat);
+										$jumlah = mysqli_num_rows($querypelanggan);
+											if($jumlah > 0){																								
+											$array_alamat = mysqli_fetch_array($querypelanggan);															
+																																	
+											?>											
+											<strong>Nama:</strong> <span><?php echo $array_alamat['nama'];?></span> <br>
+											<strong>Email:</strong> <?php echo $array_alamat['email'];?> <br>
+											<strong>No.Telp:</strong> <?php echo $array_alamat['no_telp'];?> <br>
+											<strong>Kecamatan:</strong><?php echo $array_alamat['kecamatan'];?> <br>										
+											<strong>Kota:</strong><?php echo $array_alamat['kota'];?> <br>										
+											<strong>Alamat:</strong><?php echo $array_alamat['alamat'];?> <br>										
+											
+											<?php }?>
+										</p>
+									</div>
+								</div>
+								<p class="small"><strong>Tambahan :</strong></p>
+								<table class="table cart table-bordered">
+									<thead>
+										<tr>
+											<th>Produk</th>
+											<th> </th>
+											<th></th>
+											<th class="amount">Total </th>
+										</tr>
+									</thead>
+									<tbody>
+										
+										<?php $conn = mysqli_connect('localhost', 'root', '', 'batiku');
+										     $queryBarang = mysqli_query($conn, "SELECT * FROM tabel_transaksi where idUser = '$_SESSION[idUser]' order by idtransaksi desc limit 1");
+										    $jumlah = mysqli_num_rows($queryBarang);
+											if($jumlah == 0){
+												echo '
+												<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td style="width: 50vw">Belum Ada Transaksi</td>
+												<td></td>
+												<td></td>                            
+													</tr>
+													';
+												}else{
+												while($arrayBarang = mysqli_fetch_array($queryBarang)){                          
+												echo '
+													<tr>																								
+													<td class="" colspan="3" ">'.$arrayBarang['daftarBarang'].'</td>
+													<td class="amount">Rp. '.$arrayBarang['total'].'</td>                            													
+													</tr>						
+													
+													<tr>
+											<td class="total-quantity" colspan="3">Total</td>
+											<td class="total-amount">Rp. '.$arrayBarang['total'].'</td>
+										</tr>	';
+												}	}	?>
+													
+																			
+										 										
+									</tbody>
+								</table>
+								<p class="small">Jika anda punya pertanyaan dengan orderan ini, silakan hubungi <strong>Batik Adhiwastra Jakarta.</strong> <br> Terimkasih sudah mengorder!</p>
+								<hr>
+							</div>
+							<div class="text-right">	
+								<button onclick="print_window();" class="btn btn-print btn-default-transparent btn-hvr hvr-shutter-out-horizontal">Print <i class="fa fa-print pl-10"></i></button>
+							</div>
+						</div>
+						<!-- main end -->
+
+					</div>
+				</div>
+			</section>
+			<!-- main-container end -->
+
+		
+			<!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
+			<!-- ================ -->
+			<?php require_once "footer.php"; ?>
+			<!-- footer end -->
+			
+		</div>
+		<!-- page-wrapper end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster -->
+		<!-- ================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="plugins/modernizr.js"></script>
+
+		<!-- Magnific Popup javascript -->
+		<script type="text/javascript" src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="plugins/waypoints/jquery.waypoints.min.js"></script>
+
+		<!-- Count To javascript -->
+		<script type="text/javascript" src="plugins/jquery.countTo.js"></script>
+		
+		<!-- Parallax javascript -->
+		<script src="plugins/jquery.parallax-1.1.3.js"></script>
+
+		<!-- Contact form -->
+		<script src="plugins/jquery.validate.js"></script>
+
+		<!-- Owl carousel javascript -->
+		<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
+		
+		<!-- SmoothScroll javascript -->
+		<script type="text/javascript" src="plugins/jquery.browser.js"></script>
+		<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="js/custom.js"></script>
+	</body>
+</html>

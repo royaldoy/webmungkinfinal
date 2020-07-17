@@ -60,9 +60,9 @@ require("config/db.php");
 									echo '
 									<div class="col-md-3 col-sm-6 masonry-grid-item">
 											<div class="listing-item white-bg bordered mb-20">
-												<div class="overlay-container">
+												<div class="overlay-container" style="width:280px;height:400px;">
 													<img src="admin/proses/'.$arrayWanita['path'].'" alt="'.$arrayWanita['path'].'">
-													<a class="overlay-link popup-img-single" href="'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
+													<a class="overlay-link popup-img-single" href="admin/proses/'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
 													
 													<div class="overlay-to-top links">
 														<span class="small">
@@ -112,9 +112,9 @@ require("config/db.php");
 									echo '
 									<div class="col-md-3 col-sm-6 masonry-grid-item">
 											<div class="listing-item white-bg bordered mb-20">
-												<div class="overlay-container">
+												<div class="overlay-container" style="width:280px;height:400px;">
 													<img src="admin/proses/'.$arrayWanita['path'].'" alt="'.$arrayWanita['path'].'">
-													<a class="overlay-link popup-img-single" href="'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
+													<a class="overlay-link popup-img-single" href="admin/proses/'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
 													
 													<div class="overlay-to-top links">
 														<span class="small">
@@ -164,9 +164,9 @@ require("config/db.php");
 									echo '
 									<div class="col-md-3 col-sm-6 masonry-grid-item">
 											<div class="listing-item white-bg bordered mb-20">
-												<div class="overlay-container">
-													<img src="admin/proses/'.$arrayWanita['path'].'" alt="'.$arrayWanita['path'].'">
-													<a class="overlay-link popup-img-single" href="'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
+												<div class="overlay-container" style="width:280px;height:400px;">
+													<img src="admin/proses/'.$arrayWanita['path'].'"  alt="'.$arrayWanita['path'].'">
+													<a class="overlay-link popup-img-single" href="admin/proses/'.$arrayWanita['path'].'"><i class="fa fa-search-plus"></i></a>
 													
 													<div class="overlay-to-top links">
 														<span class="small">

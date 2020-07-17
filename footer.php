@@ -112,9 +112,9 @@
 							<div class="row">
 								<div class="col-md-3">
 									<div class="footer-content">
-										<div class="logo-footer"><img id="logo-footer" src="images/logo_light_blue.png" alt=""></div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Ipsa, aut voluptas quaerat.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores similique voluptatum, culpa ad iure sed.</p>
+										<div class="logo-footer"><img id="logo-footer" src="images/logo_web3.png"  alt=""></div>
+										<p>Batik Adhiwastra adalah produk baik dari Adhiwastra Group yang berdiri sejak tahun 2020, kualitas yang kami sajikan sudah pasi sangat bagus dan bisa diadu dengan produk produk internasional.</p>
+										
 										<div class="icons-block mt-10 mb-10">
 											<i class="fa fa-cc-paypal"></i>
 											<i class="fa fa-cc-amex"></i>
@@ -142,17 +142,17 @@
 									<div class="footer-content">
 										<h2 class="title">Find Us</h2>
 										<div class="separator-2"></div>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium odio voluptatem necessitatibus illo vel dolorum soluta.</p>
+										<p>Untuk mendapatkan informasi terbaru mengenai produk kami, silakan follow dan ikuti akun sosial media kami.</p>
 										<ul class="social-links circle animated-effect-1">
-											<li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>													
-										<li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-										<li class="instagram"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-instagram"></i></a></li>
+											<li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>													
+										<li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+										<li class="instagram"><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
 										</ul>
 										<div class="separator-2"></div>
 										<ul class="list-icons">
-											<li><i class="fa fa-map-marker pr-10 text-default"></i> One infinity loop, 54100</li>
-											<li><i class="fa fa-phone pr-10 text-default"></i> +00 1234567890</li>
-											<li><a href="mailto:info@theproject.com"><i class="fa fa-envelope-o pr-10"></i>info@theproject.com</a></li>
+											<li><i class="fa fa-map-marker pr-10 text-default"></i> Surakarta</li>
+											<li><i class="fa fa-phone pr-10 text-default"></i> +62 851 341 651</li>
+											<li><a href="mailto:info@theproject.com"><i class="fa fa-envelope-o pr-10"></i>adhiwastrajakarta@gmail.com</a></li>
 										</ul>
 									</div>
 								</div>

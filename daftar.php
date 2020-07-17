@@ -1,3 +1,15 @@
+<?php
+	session_start();
+ if(isset($_SESSION['idUser'])){
+	  
+	  echo '
+        <script>
+          alert("Anda sudah login");
+          window.location = "home.php"
+        </script>
+        ';
+ } else {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,3 +73,6 @@
     <script src="js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
+<?php 
+ }
+?>

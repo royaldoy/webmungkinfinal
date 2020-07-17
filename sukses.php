@@ -52,6 +52,7 @@ require("config/db.php");
 							<p class="lead text-center">Silakan lakukan pembayaran dan tunggu kurir datang ke rumah anda dengan tenang.</p>
 							<p class="text-center">
 								<a href="home.php" class="btn btn-default btn-lg">Lanjutkan Belanja!</a>	
+								<a href="invoice.php" class="btn btn-danger btn-lg">Lihat Invoice</a>	
 							</p>
 
 						</div>
